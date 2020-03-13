@@ -1,0 +1,92 @@
+<xml 
+  xmlns="http://www.w3.org/1999/xhtml">
+  <block type="onfirstboot" id="onfirstboot" x="2" y="-8">
+    <next>
+      <block type="sethostname" id="cgqk2#fnKL2gP7MCb[Tm">
+        <field name="1">rasprint</field>
+        <next>
+          <block type="changepass" id="|vWI[?qt,6Wr_)P)WWRZ">
+            <field name="1">hacking123#</field>
+            <next>
+              <block type="packageinstall" id="bhe*h,*G:9~QT=SxFK4P">
+                <field name="1">zip</field>
+                <next>
+                  <block type="packageinstall" id="^wLwG1-pl/l:Rp!0g]sk">
+                    <field name="1">htop</field>
+                    <next>
+                      <block type="packageinstall" id="@{1FhDd{;%ejZcfGC-@}">
+                        <field name="1">build-essential</field>
+                        <next>
+                          <block type="packageinstall" id="|O|#{`lM3{c/Tr[X8d]S">
+                            <field name="1">python-pip</field>
+                            <next>
+                              <block type="packageinstall" id="DNx{Px5{e#mM@GQj`c?m">
+                                <field name="1">libjpeg8-dev</field>
+                                <next>
+                                  <block type="packageinstall" id=")84fxU4Nr:*IF-=Kj4st">
+                                    <field name="1">cmake</field>
+                                    <next>
+                                      <block type="packageinstall" id="PX,C_3kJI,UP`yTBMIS1">
+                                        <field name="1">g++</field>
+                                        <next>
+                                          <block type="packageinstall" id="oQiqoCJEn5U3*Q~e*T^x">
+                                            <field name="1">gcc</field>
+                                            <next>
+                                              <block type="downloadfile" id=")cAhQgYZEO5d%xuyA-%*">
+                                                <field name="1">https://raw.githubusercontent.com/jesgeerts/pibaked-scripts/master/octopi/install.sh</field>
+                                                <field name="2">/tmp/install.sh</field>
+                                                <next>
+                                                  <block type="runcommand" id="APT-YQ[BA(72n:@D]y!E">
+                                                    <field name="1">chmod +x /tmp/install.sh</field>
+                                                    <field name="2">root</field>
+                                                    <next>
+                                                      <block type="runcommand" id="d?kJ!d:cv4A03Lc~!nLj">
+                                                        <field name="1">/tmp/install.sh</field>
+                                                        <field name="2">root</field>
+                                                        <next>
+                                                          <block type="deletefile" id="NH[=V987ed0MjZFO^l%u">
+                                                            <field name="1">/boot/ssh</field>
+                                                            <next>
+                                                              <block type="reboot" id="dm1Gv,/V%a_;u0RHlgn5"></block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="onboot" id="YAI@mFW!7f#lS@gw9(;@" x="747" y="0">
+    <next>
+      <block type="runcommand" id="AZ5FHj/kM2*]YPP+3M=z">
+        <field name="1">/bin/bash /opt/octoprint/boot.sh</field>
+        <field name="2">root</field>
+      </block>
+    </next>
+  </block>
+  <firstboot 
+    xmlns="">0
+  </firstboot>
+</xml>
